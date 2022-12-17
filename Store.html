@@ -10,8 +10,8 @@
             <img class="logo" src="media/brandLogo.png" alt="logo">
             <nav>
                 <ul class="nav_links">
-                    <li><a href="media/HtmlTest.html">Phones</a></li>
-                    <li><a href="media/Store.html">Displays</a></li>
+                    <li><a href="HtmlTest.html">Phones</a></li>
+                    <li><a href="Store.html">Displays</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
             </nav>
@@ -48,20 +48,5 @@
         </div>
     </body>
 
-    <script>
-        var logo = document.getElementById("bleakLogo");
-        var par = document.getElementById("par");
-
-        window.onscroll = function() {
-            var scrollY = window.scrollY;
-
-            if (scrollY > 50) {
-                logo.style.paddingTop = "15%";
-                par.style.opacity = 1;
-            } else {
-                logo.style.paddingTop = "17%";
-                par.style.opacity = 0;
-            }
-        }
-    </script>
+    <script src="js/storePage.js"></script>
 </html>
