@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bleak - Home</title>
+        <link rel="icon" href="pageIcon.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="brandLogo.png" alt="logo">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="HtmlTest.html">Phones</a></li>
+                    <li><a href="Store.html">Displays</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="#"><button>Contact</button></a>
+        </header>
+        <h1 style="padding-top: 80px">Your window to the virtual world.</h1>
+        <p>Choose from a variety of Bleak® displays.</p>
+        
+        <div class="container">
+            <div class="bckr_panoramic" style="content: url(bleakRosetta.png)"></div>
+            <img class="bleakLogo" src="bleakRosetta1.png" alt="logo" id="bleakLogo" style="padding-top: 17%;">
+            <p style="color: aliceblue;padding-top: 21.5%;font-size: 20px;transition: 0.8s;opacity: 0;" id="par">The best quality professional display.</p>
+        </div>
+
+        <div class="bckr_slot" style="margin-top: 19%;">
+            <h1>The Bleak® Rosetta Display</h1>
+            <p>Industry leading professional display.</p>
+
+            <div class="specs" style="padding: 8px 12%; padding-top: 25px;">
+                <img src="bleakRosetta3.png" class="colorShot" style="width: 27%">
+                <img src="bleakRosetta5.png" class="colorShot" style="width: 27%">
+                <img src="bleakRosetta4.png" class="colorShot" style="width: 27%">
+            </div>
+            <h1>Starts at $1999</h1>
+            <a class="cta" href="#"><button style="margin: 8px auto; display:block">Purchase</button></a>
+        </div>
+
+        <div class="container">
+            <div class="bckr_panoramic" style="content: url(outroShot2.png)"></div>
+        </div>
+
+        <div class="bckr_slot">
+            <p style="padding-top: 20px; padding-bottom: 40px;color:darkgray">Bleak® 2022</p>
+        </div>
+    </body>
+
+    <script>
+        var logo = document.getElementById("bleakLogo");
+        var par = document.getElementById("par");
+
+        window.onscroll = function() {
+            var scrollY = window.scrollY;
+
+            if (scrollY > 50) {
+                logo.style.paddingTop = "15%";
+                par.style.opacity = 1;
+            } else {
+                logo.style.paddingTop = "17%";
+                par.style.opacity = 0;
+            }
+        }
+    </script>
+</html>

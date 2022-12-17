@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bleak - Home</title>
+        <link rel="icon" href="pageIcon.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="brandLogo.png" alt="logo">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="HtmlTest.html">Phones</a></li>
+                    <li><a href="Store.html">Displays</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="#"><button>Contact</button></a>
+        </header>
+        <h1 style="padding-top: 80px">Your way to connect with the world.</h1>
+        <p>Choose from the variety of Bleak® mobile phones.</p>
+        <div class="container">
+            <div class="bckr_panoramic"></div>
+            <img class="bleakLogo" src="bleakOne2.png" alt="logo" id="bleakLogo">
+            <p style="color: aliceblue;padding-top: 30%;font-size: 20px;transition: 0.8s;opacity: 0;" id="par">Introducing the first Bleak branded phone.</p>
+        </div>
+
+        <div class="bckr_slot">
+            <h1>A revolution in the consumer electronics market.</h1>
+            <p>Unparalelled power and flexibility.</p>
+            <div class="specs">
+                <h1>Snapdragon® 8+ Gen1 Processor</h1>
+                <h1>4K PureColor® Display</h1>
+                <h1>128MP, x64 Zoom Camera</h1>
+            </div>
+            <div class="specs">
+                <p>The Qualcomm® Snapdragon® 8+ Gen1 Mobile Platform packs industry-leading innovations in 5G, AI, gaming, photography, and the many more premium experiences you deserve.</p>
+                <p>Introducing innovative display technologies, the Bleak PureColor® display sets a new industry standard for incredible reference-quality imaging—1000 nits of sustained full-screen brightness.</p>
+                <p>The Bleak ONE camera is unrivaled in its field of use. Packing incredible resolution and zoom capabilites never previously seen for the same price.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <video src="bleakColors1.mp4" class="videoWstawka" id="vid" type="video/mp4" preload="auto" muted="muted"></video>
+            <h1 class="centeredheader" id="ch">Express yourself.</h1>
+        </div>
+
+        <div>
+            <h1>Pick from one of the three unique colors.</h1>
+            <p>The Bleak ONE comes in three vibrant colors</p>
+            <div class="specs">
+                <h1>Aquatic Blue</h1>
+                <h1>Emerald Green</h1>
+                <h1>Metallic Red</h1>
+            </div>
+            <div class="specs" style="padding: 8px 15.5%">
+                <img src="aquaticBlue.png" class="colorShot">
+                <img src="emeraldGreen.png" class="colorShot">
+                <img src="lightRed.png" class="colorShot">
+            </div>
+            <div class="specs" style="padding-top: 0">
+                <h1>From $529</h1>
+                <h1>From $529</h1>
+                <h1>From $499</h1>
+            </div>
+
+            <div class="specs" style="padding-top: 0;padding: 8px 17.5%">
+                <a class="cta" href="#"><button>Purchase</button></a>
+                <a class="cta" href="#"><button>Purchase</button></a>
+                <a class="cta" href="#"><button>Purchase</button></a>
+            </div>
+
+            <div class="container">
+                <div class="bckr_panoramic" style="content: url(outroShot.jpg)"></div>
+            </div>
+
+            <div class="bckr_slot">
+                <p style="padding-top: 20px; padding-bottom: 40px;color:darkgray">Bleak® 2022</p>
+            </div>
+    </body>
+
+    <script>
+        var logo = document.getElementById("bleakLogo");
+        var overlay = document.getElementById("overlay");
+        var par = document.getElementById("par");
+        var vid = document.getElementById("vid");
+        var ch = document.getElementById("ch");
+
+        var vidPlayed = false;
+
+
+        var logoPadding = 25;
+
+        window.onscroll = function() {
+            var scrollY = window.scrollY;
+
+            if (scrollY > 50) {
+                logo.style.paddingTop = "23%";
+                par.style.opacity = 1;
+            } else {
+                logo.style.paddingTop = "25%";
+                par.style.opacity = 0;
+            }
+
+            if (scrollY > 1100 && scrollY < 2350) {
+                if (vidPlayed == false) {
+                    vid.play();
+                    vidPlayed = true;
+                }
+                if (scrollY < 1800) {
+                    ch.style.opacity = 1;
+                }
+            }
+
+            if (scrollY < 600 || scrollY > 2350) {
+                vidPlayed = false;
+                ch.style.opacity = 0;
+                vid.currentTime = 0;
+            }
+
+            if (scrollY > 1800) {
+                ch.style.opacity = 0;
+            }
+        }
+    </script>
+</html>
